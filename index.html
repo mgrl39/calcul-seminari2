@@ -1,0 +1,868 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seminari 2 · Càlcul | Aprèn, practica i supera-ho</title>
+  <meta name="description" content="Aprèn el domini de funcions, les composicions, les equacions exponencials i logarítmiques i el teorema de Bolzano amb teoria clara, exercicis infinits i un repte final.">
+  <meta name="theme-color" content="#17212b">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2317212b'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='30' fill='%23f5f0e6' text-anchor='middle'%3ES2%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Salta al contingut principal</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#inici" data-nav="inici" aria-label="Seminari 2 de Càlcul, torna a l'inici">
+        <span class="brand-mark">S2</span>
+        <span class="brand-text">
+          <strong>Seminari 2</strong>
+          <span>Càlcul</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegació principal">
+        <button class="nav-link" type="button" data-nav="inici">Inici</button>
+        <button class="nav-link" type="button" data-nav="teoria">Teoria</button>
+        <button class="nav-link" type="button" data-nav="practica">Pràctica</button>
+        <button class="nav-link" type="button" data-nav="repte">Repte</button>
+      </nav>
+
+      <button class="header-cta" type="button" data-practice="1">
+        Practica <span aria-hidden="true">↗</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============================= INICI ============================= -->
+    <section class="view" id="view-inici" aria-labelledby="inici-title">
+      <div class="hero-wrap">
+        <div class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow eyebrow-light"><span class="eyebrow-dot"></span> Grau en Enginyeria Informàtica · </p>
+            <h1 id="inici-title">El Seminari 2 de Càlcul,<br><em>finalment clar.</em></h1>
+            <p class="hero-lede">
+              Domini, composició, equacions, Bolzano i grau 3. Teoria curta,
+              exemples resolts pas a pas i exercicis generats perquè no et calgui
+              memoritzar res a cegues.
+            </p>
+            <div class="hero-actions">
+              <button class="btn btn-primary" type="button" data-practice="1">
+                Comença a practicar <span aria-hidden="true">→</span>
+              </button>
+              <button class="btn btn-ghost-light" type="button" data-nav="teoria">
+                Explora la teoria
+              </button>
+            </div>
+            <div class="hero-meta">
+              <div><strong>5</strong><span>blocs essencials</span></div>
+              <div><strong>∞</strong><span>exercicis generats</span></div>
+              <div><strong>15 min</strong><span>repte final</span></div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="math-card">
+              <div class="math-card-top">
+                <span>Exercici 4 · Bolzano</span>
+                <span class="status-pill"><span></span> resolt</span>
+              </div>
+              <p class="math-card-q">
+                Si <span class="math-inline">f</span> és contínua a <span class="math-inline">[0, 1]</span>,
+                amb <span class="math-inline">f(0) &lt; 0 &lt; f(1)</span>, què pots assegurar?
+              </p>
+              <svg class="bolzano-graph" viewBox="0 0 420 220" role="img" aria-label="Gràfica d'una funció que canvia de signe i talla l'eix en un punt c">
+                <defs>
+                  <linearGradient id="curveFill" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#d8583e"/>
+                    <stop offset="100%" stop-color="#1b7a75"/>
+                  </linearGradient>
+                </defs>
+                <g class="grid-lines" aria-hidden="true">
+                  <line x1="50" y1="30" x2="390" y2="30"/>
+                  <line x1="50" y1="80" x2="390" y2="80"/>
+                  <line x1="50" y1="130" x2="390" y2="130"/>
+                  <line x1="50" y1="180" x2="390" y2="180"/>
+                  <line x1="120" y1="20" x2="120" y2="195"/>
+                  <line x1="210" y1="20" x2="210" y2="195"/>
+                  <line x1="300" y1="20" x2="300" y2="195"/>
+                  <line x1="390" y1="20" x2="390" y2="195"/>
+                </g>
+                <line class="axis" x1="35" y1="165" x2="398" y2="165"/>
+                <line class="axis" x1="50" y1="205" x2="50" y2="18"/>
+                <polygon class="axis-arrow" points="398,165 389,161 389,169"/>
+                <polygon class="axis-arrow" points="50,18 46,27 54,27"/>
+                <text class="axis-label" x="401" y="170">x</text>
+                <text class="axis-label" x="56" y="16">y</text>
+                <path class="curve" d="M70,203 C118,199 124,179 157,142 C194,101 258,123 382,43"/>
+                <line class="guide" x1="95" y1="165" x2="95" y2="199"/>
+                <line class="guide" x1="300" y1="165" x2="300" y2="86"/>
+                <line class="guide guide-accent" x1="142" y1="165" x2="142" y2="153"/>
+                <circle class="point point-neg" cx="95" cy="199" r="4.5"/>
+                <circle class="point point-pos" cx="300" cy="86" r="4.5"/>
+                <circle class="point point-root" cx="142" cy="165" r="5.5"/>
+                <text class="graph-label label-neg" x="82" y="214">f(a) &lt; 0</text>
+                <text class="graph-label label-pos" x="286" y="76">f(b) &gt; 0</text>
+                <text class="graph-label label-root" x="146" y="156">c</text>
+              </svg>
+              <div class="math-card-result">
+                <span class="result-check" aria-hidden="true">✓</span>
+                <p>Existeix un <span class="math-inline">c ∈ (0, 1)</span> amb <span class="math-inline">f(c) = 0</span>.</p>
+              </div>
+              <div class="floating-chip" aria-hidden="true">
+                <span class="floating-chip-icon">∃</span>
+                <span><strong>Almenys una</strong> arrel real</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-shell home-body">
+        <div class="progress-strip" id="home-progress">
+          <div class="progress-strip-copy">
+            <span class="eyebrow">El teu progrés</span>
+            <strong id="home-progress-title">Encara no has començat. Tria un bloc i fes el primer exercici.</strong>
+          </div>
+          <div class="progress-strip-right">
+            <div class="progress-track" aria-hidden="true"><span id="home-progress-bar"></span></div>
+            <span class="progress-count" id="home-progress-count">0 / 25 encerts</span>
+          </div>
+        </div>
+
+        <section class="home-section" aria-labelledby="blocs-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">El mapa del seminari</p>
+              <h2 id="blocs-title">Cinc blocs, zero farciment.</h2>
+            </div>
+            <p class="section-intro">
+              Cada bloc té la idea essencial, un exemple resolt i un generador
+              d'exercicis. El progrés es guarda al teu navegador.
+            </p>
+          </div>
+
+          <div class="blocs-grid">
+            <article class="bloc-card theme-1" data-progress-card="1">
+              <div class="bloc-top">
+                <span class="bloc-icon" aria-hidden="true">√x</span>
+                <span class="bloc-number">01</span>
+              </div>
+              <h3>Domini d'una funció</h3>
+              <p>Denominadors, arrels i logaritmes. Troba tots els <span class="math-inline">x</span> per als quals l'expressió té sentit.</p>
+              <div class="bloc-tags"><span>Radicals</span><span>Logaritmes</span><span>Intervals</span></div>
+              <div class="bloc-progress">
+                <div class="progress-track"><span data-progress-fill="1"></span></div>
+                <span data-progress-label="1">0 / 5</span>
+              </div>
+              <div class="bloc-actions">
+                <button class="text-link" type="button" data-nav="teoria" data-scroll="teoria-1">Teoria</button>
+                <button class="text-link text-link-strong" type="button" data-practice="1">Practicar →</button>
+              </div>
+            </article>
+
+            <article class="bloc-card theme-2" data-progress-card="2">
+              <div class="bloc-top">
+                <span class="bloc-icon" aria-hidden="true">(f∘g)</span>
+                <span class="bloc-number">02</span>
+              </div>
+              <h3>Composició de funcions</h3>
+              <p>Substitueix una funció dins de l'altra. Aprèn a llegir <span class="math-inline">f ∘ g</span> i a no confondre-ho amb un producte.</p>
+              <div class="bloc-tags"><span>f ∘ g</span><span>Substitució</span><span>Domini</span></div>
+              <div class="bloc-progress">
+                <div class="progress-track"><span data-progress-fill="2"></span></div>
+                <span data-progress-label="2">0 / 5</span>
+              </div>
+              <div class="bloc-actions">
+                <button class="text-link" type="button" data-nav="teoria" data-scroll="teoria-2">Teoria</button>
+                <button class="text-link text-link-strong" type="button" data-practice="2">Practicar →</button>
+              </div>
+            </article>
+
+            <article class="bloc-card theme-3" data-progress-card="3">
+              <div class="bloc-top">
+                <span class="bloc-icon" aria-hidden="true">e<sup>x</sup></span>
+                <span class="bloc-number">03</span>
+              </div>
+              <h3>Equacions exponencials i logarítmiques</h3>
+              <p>Canvis de variable, propietats dels logaritmes i, sobretot, comprovar les solucions al domini.</p>
+              <div class="bloc-tags"><span>e<sup>x</sup></span><span>ln</span><span>Solucions vàlides</span></div>
+              <div class="bloc-progress">
+                <div class="progress-track"><span data-progress-fill="3"></span></div>
+                <span data-progress-label="3">0 / 5</span>
+              </div>
+              <div class="bloc-actions">
+                <button class="text-link" type="button" data-nav="teoria" data-scroll="teoria-3">Teoria</button>
+                <button class="text-link text-link-strong" type="button" data-practice="3">Practicar →</button>
+              </div>
+            </article>
+
+            <article class="bloc-card theme-4" data-progress-card="4">
+              <div class="bloc-top">
+                <span class="bloc-icon" aria-hidden="true">IVT</span>
+                <span class="bloc-number">04</span>
+              </div>
+              <h3>Teorema de Bolzano</h3>
+              <p>Continuïtat + canvi de signe = arrel assegurada. Aprèn a justificar-ho sense saltar-te cap hipòtesi.</p>
+              <div class="bloc-tags"><span>Continuïtat</span><span>Signes</span><span>Existència</span></div>
+              <div class="bloc-progress">
+                <div class="progress-track"><span data-progress-fill="4"></span></div>
+                <span data-progress-label="4">0 / 5</span>
+              </div>
+              <div class="bloc-actions">
+                <button class="text-link" type="button" data-nav="teoria" data-scroll="teoria-4">Teoria</button>
+                <button class="text-link text-link-strong" type="button" data-practice="4">Practicar →</button>
+              </div>
+            </article>
+
+            <article class="bloc-card theme-5" data-progress-card="5">
+              <div class="bloc-top">
+                <span class="bloc-icon" aria-hidden="true">x³</span>
+                <span class="bloc-number">05</span>
+              </div>
+              <h3>Polinomis de grau 3</h3>
+              <p>Demostra que tot polinomi cúbic té almenys una arrel real fent servir límits i Bolzano.</p>
+              <div class="bloc-tags"><span>Límits</span><span>Grau senar</span><span>Demostració</span></div>
+              <div class="bloc-progress">
+                <div class="progress-track"><span data-progress-fill="5"></span></div>
+                <span data-progress-label="5">0 / 5</span>
+              </div>
+              <div class="bloc-actions">
+                <button class="text-link" type="button" data-nav="teoria" data-scroll="teoria-5">Teoria</button>
+                <button class="text-link text-link-strong" type="button" data-practice="5">Practicar →</button>
+              </div>
+            </article>
+
+            <article class="bloc-card bloc-card-challenge">
+              <div class="challenge-card-glow" aria-hidden="true"></div>
+              <div class="bloc-top">
+                <span class="bloc-icon bloc-icon-dark" aria-hidden="true">✓</span>
+                <span class="bloc-number">06</span>
+              </div>
+              <p class="eyebrow eyebrow-light">Posa't a prova</p>
+              <h3>El repte final</h3>
+              <p>10 preguntes de tots els blocs, 15 minuts i correcció completa al final. Sense pistes.</p>
+              <div class="challenge-card-meta">
+                <span>10 preguntes</span>
+                <span>·</span>
+                <span>15 min</span>
+              </div>
+              <button class="btn btn-light" type="button" data-nav="repte">Comença el repte <span aria-hidden="true">→</span></button>
+            </article>
+          </div>
+        </section>
+
+        <section class="exam-tips" aria-labelledby="tips-title">
+          <div class="exam-tips-title">
+            <p class="eyebrow eyebrow-light">Consells de seminari</p>
+            <h2 id="tips-title">50 minuts. Tres exercicis. Zero presses.</h2>
+          </div>
+          <div class="exam-tip-list">
+            <div class="exam-tip">
+              <span class="exam-tip-number">01</span>
+              <div>
+                <strong>Tria amb cap</strong>
+                <p>De cinc exercicis n'has de fer tres. Comença pel que domines i deixa el més llarg per al final.</p>
+              </div>
+            </div>
+            <div class="exam-tip">
+              <span class="exam-tip-number">02</span>
+              <div>
+                <strong>Comprova els dominis</strong>
+                <p>En equacions logarítmiques, una solució algebraica pot no ser vàlida. Comprova-la sempre a l'enunciat.</p>
+              </div>
+            </div>
+            <div class="exam-tip">
+              <span class="exam-tip-number">03</span>
+              <div>
+                <strong>Justifica Bolzano</strong>
+                <p>No n'hi ha prou amb dir «canvia de signe». Escriu que la funció és contínua i que <span class="math-inline">f(a)f(b) &lt; 0</span>.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="home-section how-section" aria-labelledby="how-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Com funciona</p>
+              <h2 id="how-title">Un bucle senzill: entendre, provar, corregir.</h2>
+            </div>
+          </div>
+          <div class="how-grid">
+            <div class="how-card">
+              <span class="how-number">1</span>
+              <h3>Llegeix la idea</h3>
+              <p>Teoria curta, sense demostracions infinites. Cada concepte ve amb un exemple del seminari resolt.</p>
+            </div>
+            <div class="how-card">
+              <span class="how-number">2</span>
+              <h3>Practica amb pistes</h3>
+              <p>Els exercicis es generen amb nombres nous. Si t'encalles, obre la pista; si falles, mira la solució pas a pas.</p>
+            </div>
+            <div class="how-card">
+              <span class="how-number">3</span>
+              <h3>Tanca el bucle</h3>
+              <p>Quan tinguis cinc encerts en un bloc, passa al repte final per veure si ho domines sota pressió.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- ============================= TEORIA ============================= -->
+    <section class="view" id="view-teoria" aria-labelledby="teoria-title" hidden>
+      <div class="page-shell page-section">
+        <div class="page-head">
+          <p class="eyebrow">La teoria essencial</p>
+          <h2 id="teoria-title">Tot el que necessites,<br><em>sense farciment.</em></h2>
+          <p class="page-lede">
+            Cinc idees, cinc exemples resolts i els errors que més es repeteixen.
+            Si entens aquesta pàgina, tens el seminari a tocar.
+          </p>
+        </div>
+
+        <nav class="theory-nav" aria-label="Blocs de teoria">
+          <button type="button" data-scroll="teoria-1"><span>01</span>Domini</button>
+          <button type="button" data-scroll="teoria-2"><span>02</span>Composició</button>
+          <button type="button" data-scroll="teoria-3"><span>03</span>Equacions</button>
+          <button type="button" data-scroll="teoria-4"><span>04</span>Bolzano</button>
+          <button type="button" data-scroll="teoria-5"><span>05</span>Grau 3</button>
+        </nav>
+
+        <article class="theory-card theme-1" id="teoria-1">
+          <header class="theory-head">
+            <span class="theory-number">01</span>
+            <div>
+              <p class="unit-kicker">Bloc 01</p>
+              <h3>Domini d'una funció</h3>
+              <p class="theory-sub">El conjunt de valors de <span class="math-inline">x</span> per als quals l'expressió té sentit.</p>
+            </div>
+            <span class="theory-icon" aria-hidden="true">√x</span>
+          </header>
+          <div class="theory-body">
+            <div class="theory-main">
+              <p class="theory-lead">
+                Abans de calcular res, pregunta't: <strong>què no pot passar?</strong>
+                El domini és la llista de tot allò que sí que pot passar.
+              </p>
+
+              <h4>Les tres restriccions que ho canvien tot</h4>
+              <ul class="rule-list">
+                <li><span class="rule-icon">÷</span><div><strong>Denominador ≠ 0.</strong><p>Si hi ha una fracció, el denominador no es pot anul·lar.</p></div></li>
+                <li><span class="rule-icon">√</span><div><strong>Arrel d'índex parell ≥ 0.</strong><p>El radicand d'una arrel quadrada ha de ser positiu o zero.</p></div></li>
+                <li><span class="rule-icon">ln</span><div><strong>Argument del logaritme &gt; 0.</strong><p><span class="math-inline">ln(A)</span> només existeix si <span class="math-inline">A &gt; 0</span>.</p></div></li>
+              </ul>
+
+              <div class="formula-box">
+                <span class="formula-label">Regla d'or</span>
+                <p>Quan hi ha diverses restriccions, el domini és la <strong>intersecció</strong> de totes. Primer resol cada condició per separat; després creua-les.</p>
+              </div>
+
+              <h4>Exemple resolt · els dos apartats del seminari</h4>
+              <div class="solved">
+                <div class="solved-question">
+                  <div class="solved-label">(a)</div>
+                  <div class="solved-math"><span class="math">f(x) = <span class="sqrt"><span class="rad"><span class="frac"><span class="frac-top">1</span><span class="frac-bottom">x² − x − 6</span></span></span></span></span></div>
+                </div>
+                <ol class="solution-steps">
+                  <li>La funció és una arrel quadrada d'una fracció. Cal que el radicand sigui més gran o igual que zero:
+                    <div class="step-math"><span class="math"><span class="frac"><span class="frac-top">1</span><span class="frac-bottom">x² − x − 6</span></span> ≥ 0.</span></div>
+                  </li>
+                  <li>Com que el numerador és <span class="math-inline">1 &gt; 0</span>, la fracció és positiva exactament quan el denominador és positiu:
+                    <div class="step-math"><span class="math">x² − x − 6 &gt; 0.</span></div>
+                  </li>
+                  <li>Factoritzem: <span class="math-inline">x² − x − 6 = (x − 3)(x + 2)</span>. Les arrels són <span class="math-inline">x = 3</span> i <span class="math-inline">x = −2</span>.</li>
+                  <li>La paràbola <span class="math-inline">x² − x − 6</span> s'obre cap amunt: és positiva <em>fora</em> de les arrels i negativa entre elles.</li>
+                  <li>A més, els punts <span class="math-inline">−2</span> i <span class="math-inline">3</span> no poden formar part del domini perquè anul·len el denominador.</li>
+                </ol>
+                <div class="solved-answer"><span>Domini</span><span class="math">D = (−∞, −2) ∪ (3, +∞)</span></div>
+              </div>
+
+              <div class="solved">
+                <div class="solved-question">
+                  <div class="solved-label">(b)</div>
+                  <div class="solved-math"><span class="math">g(x) = ln(x³ + x)</span></div>
+                </div>
+                <ol class="solution-steps">
+                  <li>L'argument del logaritme ha de ser estrictament positiu:
+                    <div class="step-math"><span class="math">x³ + x &gt; 0.</span></div>
+                  </li>
+                  <li>Factoritzem: <span class="math-inline">x³ + x = x(x² + 1)</span>.</li>
+                  <li>El factor <span class="math-inline">x² + 1</span> és sempre positiu (és una suma de quadrats). Per tant, el signe del producte és el signe de <span class="math-inline">x</span>.</li>
+                  <li>Cal <span class="math-inline">x &gt; 0</span>. Els punts <span class="math-inline">x = 0</span> no hi entren perquè l'argument s'anul·la.</li>
+                </ol>
+                <div class="solved-answer"><span>Domini</span><span class="math">D = (0, +∞)</span></div>
+              </div>
+
+              <div class="callout callout-warn">
+                <span class="callout-icon" aria-hidden="true">!</span>
+                <div>
+                  <strong>Error típic</strong>
+                  <p>Escriure <span class="math-inline">[−2, 3]</span> perquè «l'arrel ha de ser positiva o zero». Aquí l'arrel és al numerador, però l'expressió de dins depèn del denominador: on la paràbola és negativa, la fracció és negativa i no existeix l'arrel.</p>
+                </div>
+              </div>
+            </div>
+            <aside class="theory-aside">
+              <h4>Pla de combat</h4>
+              <ol class="aside-list">
+                <li><span>1</span>Marca cada restricció per separat.</li>
+                <li><span>2</span>Factoritza i fes una taula de signes.</li>
+                <li><span>3</span>Decideix si els extrems entren o no.</li>
+                <li><span>4</span>Expressa el resultat amb intervals.</li>
+              </ol>
+              <div class="aside-note">
+                <strong>Pista de seminari</strong>
+                <p>Els extrems que anul·len un denominador o un logaritme <em>sempre</em> queden fora.</p>
+              </div>
+              <button class="btn btn-small btn-accent" type="button" data-practice="1">Practica el bloc 01 <span aria-hidden="true">→</span></button>
+            </aside>
+          </div>
+        </article>
+
+        <article class="theory-card theme-2" id="teoria-2">
+          <header class="theory-head">
+            <span class="theory-number">02</span>
+            <div>
+              <p class="unit-kicker">Bloc 02</p>
+              <h3>Composició de funcions</h3>
+              <p class="theory-sub">Una funció dins d'una altra: <span class="math-inline">(f ∘ g)(x) = f(g(x))</span>.</p>
+            </div>
+            <span class="theory-icon" aria-hidden="true">f∘g</span>
+          </header>
+          <div class="theory-body">
+            <div class="theory-main">
+              <p class="theory-lead">
+                La composició no és una multiplicació. És una <strong>substitució</strong>:
+                agafes el resultat de la funció interior i el poses dins de la funció exterior.
+              </p>
+
+              <div class="formula-box">
+                <span class="formula-label">Definició</span>
+                <p class="formula-big math">(f ∘ g)(x) = f(g(x))</p>
+                <p>Es llegeix dins cap enfora: primer actua <span class="math-inline">g</span>, després <span class="math-inline">f</span>. I en general <span class="math-inline">f ∘ g ≠ g ∘ f</span>.</p>
+              </div>
+
+              <h4>Exemple resolt · l'exercici sencer</h4>
+              <p>Amb <span class="math-inline">f(x) = sin x</span> i <span class="math-inline">g(x) = x² + 7x − 4</span>:</p>
+              <div class="composition-grid">
+                <div class="composition-card">
+                  <span class="composition-label">(a) f ∘ g</span>
+                  <p class="math">f(g(x)) = sin(x² + 7x − 4)</p>
+                  <small>Substitueix <span class="math-inline">x</span> dins de <span class="math-inline">f</span> per tot <span class="math-inline">g(x)</span>.</small>
+                </div>
+                <div class="composition-card">
+                  <span class="composition-label">(b) g ∘ f</span>
+                  <p class="math">g(f(x)) = sin²x + 7 sin x − 4</p>
+                  <small>Substitueix <span class="math-inline">x</span> dins de <span class="math-inline">g</span> per <span class="math-inline">sin x</span>.</small>
+                </div>
+                <div class="composition-card">
+                  <span class="composition-label">(c) g ∘ g</span>
+                  <p class="math">(x² + 7x − 4)² + 7(x² + 7x − 4) − 4</p>
+                  <small>Posa <span class="math-inline">g(x)</span> allà on hi havia cada <span class="math-inline">x</span> de <span class="math-inline">g</span>.</small>
+                </div>
+                <div class="composition-card">
+                  <span class="composition-label">(d) f ∘ f</span>
+                  <p class="math">sin(sin x)</p>
+                  <small>La funció exterior i la interior són la mateixa.</small>
+                </div>
+              </div>
+              <p class="caption">Si a (c) desenvolupes, obtens <span class="math-inline">x⁴ + 14x³ + 48x² − 7x − 16</span>. Al seminari no cal expandir-ho si no ho demanen.</p>
+
+              <h4>I el domini de la composició?</h4>
+              <p>Per calcular <span class="math-inline">f(g(x))</span> cal que <span class="math-inline">x</span> estigui al domini de <span class="math-inline">g</span> i que <span class="math-inline">g(x)</span> estigui al domini de <span class="math-inline">f</span>. Per exemple, si <span class="math-inline">f(x) = ln x</span> i <span class="math-inline">g(x) = x² + 1</span>, llavors <span class="math-inline">(f ∘ g)(x) = ln(x² + 1)</span>, que té sentit per a tot <span class="math-inline">x</span> perquè <span class="math-inline">x² + 1 &gt; 0</span>.</p>
+
+              <div class="callout callout-warn">
+                <span class="callout-icon" aria-hidden="true">!</span>
+                <div>
+                  <strong>Error típic</strong>
+                  <p>Confondre <span class="math-inline">sin²x</span> amb <span class="math-inline">sin(x²)</span>, o escriure <span class="math-inline">f(g(x)) = f(x) · g(x)</span>. La composició és una substitució, no un producte.</p>
+                </div>
+              </div>
+            </div>
+            <aside class="theory-aside">
+              <h4>Pla de combat</h4>
+              <ol class="aside-list">
+                <li><span>1</span>Identifica quina és la funció exterior.</li>
+                <li><span>2</span>Tapa cada <span class="math-inline">x</span> de l'exterior i posa-hi la interior.</li>
+                <li><span>3</span>Vigila els parèntesis: tot el bloc va dins del sinus, de l'exponent o de l'arrel.</li>
+                <li><span>4</span>Comprova el domini si hi ha logaritmes o arrels.</li>
+              </ol>
+              <div class="aside-note">
+                <strong>Regla mnemotècnica</strong>
+                <p><span class="math-inline">f ∘ g</span> es llegeix «f després de g». La que està més a prop de la <span class="math-inline">x</span> actua primer.</p>
+              </div>
+              <button class="btn btn-small btn-accent" type="button" data-practice="2">Practica el bloc 02 <span aria-hidden="true">→</span></button>
+            </aside>
+          </div>
+        </article>
+
+        <article class="theory-card theme-3" id="teoria-3">
+          <header class="theory-head">
+            <span class="theory-number">03</span>
+            <div>
+              <p class="unit-kicker">Bloc 03</p>
+              <h3>Equacions exponencials i logarítmiques</h3>
+              <p class="theory-sub">Canvis de variable, propietats i comprovació final.</p>
+            </div>
+            <span class="theory-icon" aria-hidden="true">e<sup>x</sup></span>
+          </header>
+          <div class="theory-body">
+            <div class="theory-main">
+              <p class="theory-lead">
+                La idea és convertir una equació que no saps resoldre en una de
+                polinòmica que sí que saps. Després, torna enrere i <strong>comprova</strong>.
+              </p>
+
+              <div class="rules-grid">
+                <div class="mini-rule">
+                  <span class="mini-rule-tag">Exponencials</span>
+                  <p>Fes el canvi <span class="math-inline">t = e<sup>x</sup></span>, amb <span class="math-inline">t &gt; 0</span>. Si apareix <span class="math-inline">e<sup>−x</sup></span>, multiplica tot per <span class="math-inline">e<sup>x</sup></span>.</p>
+                </div>
+                <div class="mini-rule">
+                  <span class="mini-rule-tag">Logarítmiques</span>
+                  <p>Usa <span class="math-inline">ln A + ln B = ln(AB)</span>. Després, com que <span class="math-inline">ln</span> és injectiu, iguala els arguments.</p>
+                </div>
+                <div class="mini-rule">
+                  <span class="mini-rule-tag">Sempre</span>
+                  <p>El logaritme només accepta arguments positius. Una solució que faci zero o negatiu un argument <strong>no és vàlida</strong>.</p>
+                </div>
+              </div>
+
+              <h4>Exemple resolt · (a) amb <span class="math-inline">e<sup>−x</sup></span></h4>
+              <div class="solved">
+                <div class="solved-question">
+                  <div class="solved-label">Equació</div>
+                  <div class="solved-math"><span class="math">2e<sup>x</sup> + 8 − 42e<sup>−x</sup> = 0</span></div>
+                </div>
+                <ol class="solution-steps">
+                  <li>Multipliquem tots els termes per <span class="math-inline">e<sup>x</sup> &gt; 0</span>:
+                    <div class="step-math"><span class="math">2e<sup>2x</sup> + 8e<sup>x</sup> − 42 = 0.</span></div>
+                  </li>
+                  <li>Dividim per 2 per simplificar:
+                    <div class="step-math"><span class="math">e<sup>2x</sup> + 4e<sup>x</sup> − 21 = 0.</span></div>
+                  </li>
+                  <li>Fem el canvi <span class="math-inline">t = e<sup>x</sup></span>, amb <span class="math-inline">t &gt; 0</span>:
+                    <div class="step-math"><span class="math">t² + 4t − 21 = 0.</span></div>
+                  </li>
+                  <li>Factoritzem: <span class="math-inline">(t + 7)(t − 3) = 0</span>, així que <span class="math-inline">t = −7</span> o <span class="math-inline">t = 3</span>.</li>
+                  <li>Descartem <span class="math-inline">t = −7</span> perquè <span class="math-inline">e<sup>x</sup></span> sempre és positiu. Queda <span class="math-inline">e<sup>x</sup> = 3</span>, és a dir, <span class="math-inline">x = ln 3</span>.</li>
+                </ol>
+                <div class="solved-answer"><span>Solució</span><span class="math">x = ln 3</span></div>
+              </div>
+
+              <h4>Exemple resolt · (b) amb logaritmes</h4>
+              <div class="solved">
+                <div class="solved-question">
+                  <div class="solved-label">Equació</div>
+                  <div class="solved-math"><span class="math">ln(x² + 5x − 50) = ln(x + 10) + ln 3</span></div>
+                </div>
+                <ol class="solution-steps">
+                  <li><strong>Condicions prèvies:</strong> <span class="math-inline">x + 10 &gt; 0</span> i <span class="math-inline">x² + 5x − 50 &gt; 0</span>.</li>
+                  <li>Ajuntem els logaritmes de la dreta: <span class="math-inline">ln(x + 10) + ln 3 = ln(3(x + 10))</span>.</li>
+                  <li>Com que <span class="math-inline">ln</span> és injectiu:
+                    <div class="step-math"><span class="math">x² + 5x − 50 = 3x + 30.</span></div>
+                  </li>
+                  <li>Passem tot a un costat:
+                    <div class="step-math"><span class="math">x² + 2x − 80 = 0.</span></div>
+                    Factoritzem: <span class="math-inline">(x − 8)(x + 10) = 0</span>. Candidats: <span class="math-inline">x = 8</span> i <span class="math-inline">x = −10</span>.
+                  </li>
+                  <li>Comprovem: <span class="math-inline">x = −10</span> fa que <span class="math-inline">x + 10 = 0</span>, i <span class="math-inline">ln 0</span> no existeix. <span class="math-inline">x = 8</span> sí que compleix totes les condicions.</li>
+                </ol>
+                <div class="solved-answer"><span>Solució</span><span class="math">x = 8</span></div>
+              </div>
+
+              <div class="callout callout-warn">
+                <span class="callout-icon" aria-hidden="true">!</span>
+                <div>
+                  <strong>Error típic</strong>
+                  <p>Resoldre l'equació algebraica i oblidar el domini. A l'exemple (b), <span class="math-inline">−10</span> és una solució perfecta de la quadràtica, però no de l'equació logarítmica original.</p>
+                </div>
+              </div>
+            </div>
+            <aside class="theory-aside">
+              <h4>Pla de combat</h4>
+              <ol class="aside-list">
+                <li><span>1</span>Escriu les condicions de domini abans de tocar l'equació.</li>
+                <li><span>2</span>Identifica el canvi de variable o la propietat que simplifica.</li>
+                <li><span>3</span>Resol l'equació polinòmica resultant.</li>
+                <li><span>4</span>Torna a la variable original i comprova cada candidat.</li>
+              </ol>
+              <div class="aside-note">
+                <strong>Recorda</strong>
+                <p><span class="math-inline">e<sup>x</sup> &gt; 0</span> sempre. Si el canvi <span class="math-inline">t = e<sup>x</sup></span> et dona una solució negativa o zero, descarta-la sense por.</p>
+              </div>
+              <button class="btn btn-small btn-accent" type="button" data-practice="3">Practica el bloc 03 <span aria-hidden="true">→</span></button>
+            </aside>
+          </div>
+        </article>
+
+        <article class="theory-card theme-4" id="teoria-4">
+          <header class="theory-head">
+            <span class="theory-number">04</span>
+            <div>
+              <p class="unit-kicker">Bloc 04</p>
+              <h3>Teorema de Bolzano</h3>
+              <p class="theory-sub">Si una funció contínua canvia de signe, pel mig hi ha una arrel.</p>
+            </div>
+            <span class="theory-icon" aria-hidden="true">IVT</span>
+          </header>
+          <div class="theory-body">
+            <div class="theory-main">
+              <p class="theory-lead">
+                Bolzano és una eina d'<strong>existència</strong>: no et diu quantes
+                arrels hi ha ni on són exactament, però et garanteix que n'hi ha com a mínim una.
+              </p>
+
+              <div class="formula-box formula-box-large">
+                <span class="formula-label">Teorema de Bolzano</span>
+                <p>Si <span class="math-inline">f</span> és contínua a <span class="math-inline">[a, b]</span> i <span class="math-inline">f(a)</span> i <span class="math-inline">f(b)</span> tenen signes oposats, aleshores existeix almenys un <span class="math-inline">c ∈ (a, b)</span> tal que</p>
+                <p class="formula-big math">f(c) = 0.</p>
+                <p>«Signes oposats» vol dir <span class="math-inline">f(a) · f(b) &lt; 0</span>.</p>
+              </div>
+
+              <h4>Exemple resolt · l'exercici 4 del seminari</h4>
+              <div class="solved">
+                <div class="solved-question">
+                  <div class="solved-label">Enunciat</div>
+                  <div class="solved-math"><span class="math">f(x) = x<sup>1050</sup> + 3x<sup>74</sup> − 2x − 1, &nbsp; [0, 1]</span></div>
+                </div>
+                <ol class="solution-steps">
+                  <li><strong>Continuïtat:</strong> <span class="math-inline">f</span> és un polinomi, i tots els polinomis són continus a <span class="math-inline">ℝ</span>. Per tant, ho és a <span class="math-inline">[0, 1]</span>.</li>
+                  <li>Avaluem als extrems:
+                    <div class="step-math"><span class="math">f(0) = 0 + 0 − 0 − 1 = −1 &lt; 0,</span></div>
+                    <div class="step-math"><span class="math">f(1) = 1 + 3 − 2 − 1 = 1 &gt; 0.</span></div>
+                  </li>
+                  <li>Els signes són oposats: <span class="math-inline">f(0) · f(1) = (−1) · 1 &lt; 0</span>.</li>
+                  <li>Per Bolzano, existeix almenys un <span class="math-inline">c ∈ (0, 1)</span> amb <span class="math-inline">f(c) = 0</span>.</li>
+                </ol>
+                <div class="solved-answer"><span>Conclusió</span><span class="math">f té com a mínim una arrel real a (0, 1)</span></div>
+              </div>
+
+              <div class="callout callout-info">
+                <span class="callout-icon" aria-hidden="true">i</span>
+                <div>
+                  <strong>Què no diu Bolzano?</strong>
+                  <p>No diu que l'arrel sigui única. Si una funció canvia de signe tres vegades, hi pot haver tres arrels. Per demostrar que només n'hi ha una caldria informació addicional, per exemple la monotonia.</p>
+                </div>
+              </div>
+
+              <div class="callout callout-warn">
+                <span class="callout-icon" aria-hidden="true">!</span>
+                <div>
+                  <strong>Error típic</strong>
+                  <p>Oblidar la continuïtat o dir que <span class="math-inline">f(0) + f(1) &lt; 0</span> implica una arrel. La condició correcta és el <strong>producte</strong> negatiu, que equival a signes oposats.</p>
+                </div>
+              </div>
+            </div>
+            <aside class="theory-aside">
+              <h4>Pla de combat</h4>
+              <ol class="aside-list">
+                <li><span>1</span>Comprova que <span class="math-inline">f</span> és contínua a l'interval tancat.</li>
+                <li><span>2</span>Calcula <span class="math-inline">f(a)</span> i <span class="math-inline">f(b)</span>.</li>
+                <li><span>3</span>Multiplica'ls o compara els signes.</li>
+                <li><span>4</span>Enuncia la conclusió: hi ha un <span class="math-inline">c</span> a l'interval obert amb <span class="math-inline">f(c) = 0</span>.</li>
+              </ol>
+              <div class="aside-note">
+                <strong>Per què contínua?</strong>
+                <p>Si la funció es trenqués, podria saltar del costat negatiu al positiu sense passar pel zero. La continuïtat és la que impedeix aquest salt.</p>
+              </div>
+              <button class="btn btn-small btn-accent" type="button" data-practice="4">Practica el bloc 04 <span aria-hidden="true">→</span></button>
+            </aside>
+          </div>
+        </article>
+
+        <article class="theory-card theme-5" id="teoria-5">
+          <header class="theory-head">
+            <span class="theory-number">05</span>
+            <div>
+              <p class="unit-kicker">Bloc 05</p>
+              <h3>Tot polinomi de grau 3 té una arrel real</h3>
+              <p class="theory-sub">Límits a l'infinit + continuïtat + Bolzano = existència garantida.</p>
+            </div>
+            <span class="theory-icon" aria-hidden="true">x³</span>
+          </header>
+          <div class="theory-body">
+            <div class="theory-main">
+              <p class="theory-lead">
+                Un polinomi cúbic no pot «quedar-se» tot positiu o tot negatiu:
+                el terme <span class="math-inline">x³</span> domina i fa que els dos
+                extrems de la gràfica apuntin en direccions oposades.
+              </p>
+
+              <div class="formula-box">
+                <span class="formula-label">Demostració en quatre línies</span>
+                <p>Sigui <span class="math-inline">p(x) = ax³ + bx² + cx + d</span>, amb <span class="math-inline">a ≠ 0</span>. Com que el terme dominant és <span class="math-inline">ax³</span>:</p>
+                <div class="limit-grid">
+                  <div><span>Si a &gt; 0</span><p class="math">lim<sub>x→−∞</sub> p(x) = −∞</p><p class="math">lim<sub>x→+∞</sub> p(x) = +∞</p></div>
+                  <div><span>Si a &lt; 0</span><p class="math">lim<sub>x→−∞</sub> p(x) = +∞</p><p class="math">lim<sub>x→+∞</sub> p(x) = −∞</p></div>
+                </div>
+              </div>
+
+              <h4>La demostració, pas a pas</h4>
+              <div class="solved">
+                <div class="solved-question">
+                  <div class="solved-label">Objectiu</div>
+                  <div class="solved-math">Demostrar que <span class="math">p(x) = ax³ + bx² + cx + d</span> té almenys una arrel real.</div>
+                </div>
+                <ol class="solution-steps">
+                  <li><strong>Continuïtat:</strong> els polinomis són continus a tot <span class="math-inline">ℝ</span>.</li>
+                  <li><strong>Límits oposats:</strong> suposem <span class="math-inline">a &gt; 0</span> (l'altre cas és simètric). Llavors
+                    <div class="step-math"><span class="math">lim<sub>x→−∞</sub> p(x) = −∞ &nbsp; i &nbsp; lim<sub>x→+∞</sub> p(x) = +∞.</span></div>
+                  </li>
+                  <li><strong>Existeixen valors de signe oposat:</strong> per definició de límit, podem trobar <span class="math-inline">u &lt; v</span> amb <span class="math-inline">p(u) &lt; 0</span> i <span class="math-inline">p(v) &gt; 0</span>.</li>
+                  <li><strong>Apliquem Bolzano</strong> a l'interval <span class="math-inline">[u, v]</span>: com que <span class="math-inline">p</span> és contínua i canvia de signe, existeix <span class="math-inline">c ∈ (u, v)</span> amb <span class="math-inline">p(c) = 0</span>.</li>
+                </ol>
+                <div class="solved-answer"><span>Conclusió</span><span class="math">Tot polinomi de grau 3 té com a mínim una arrel real</span></div>
+              </div>
+
+              <div class="callout callout-info">
+                <span class="callout-icon" aria-hidden="true">i</span>
+                <div>
+                  <strong>Per què no funciona amb grau 4?</strong>
+                  <p>Un polinomi de grau 4 amb coeficient principal positiu tendeix a <span class="math-inline">+∞</span> tant a <span class="math-inline">−∞</span> com a <span class="math-inline">+∞</span>. Pot no canviar mai de signe: per exemple, <span class="math-inline">x⁴ + 1 &gt; 0</span> per a tot <span class="math-inline">x</span>. El grau senar és clau.</p>
+                </div>
+              </div>
+            </div>
+            <aside class="theory-aside">
+              <h4>Pla de combat</h4>
+              <ol class="aside-list">
+                <li><span>1</span>Escriu el polinomi general.</li>
+                <li><span>2</span>Mira el signe del coeficient principal.</li>
+                <li><span>3</span>Calcula els límits a ±∞.</li>
+                <li><span>4</span>Conclou amb Bolzano sobre un interval adequat.</li>
+              </ol>
+              <div class="aside-note">
+                <strong>No ho confonguis</strong>
+                <p>«Almenys una arrel real» no vol dir «exactament una». Un cúbic pot tenir una, dues o tres arrels reals (comptant multiplicitats).</p>
+              </div>
+              <button class="btn btn-small btn-accent" type="button" data-practice="5">Practica el bloc 05 <span aria-hidden="true">→</span></button>
+            </aside>
+          </div>
+        </article>
+
+        <div class="theory-cta">
+          <div>
+            <p class="eyebrow">Ara sí</p>
+            <h2>La teoria sense pràctica s'oblida.</h2>
+            <p>Tria un bloc i fes cinc exercicis. El sistema et corregeix a l'instant i et guarda el progrés.</p>
+          </div>
+          <button class="btn btn-primary" type="button" data-practice="1">Ves a la pràctica <span aria-hidden="true">→</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= PRÀCTICA ============================= -->
+    <section class="view" id="view-practica" aria-labelledby="practica-title" hidden>
+      <div class="page-shell page-section">
+        <div class="page-head page-head-row">
+          <div>
+            <p class="eyebrow">Pràctica infinita</p>
+            <h2 id="practica-title">Fes, falla,<br><em>aprèn.</em></h2>
+            <p class="page-lede">Cada exercici genera nombres nous. Tens una pista si la necessites i la solució completa després de respondre.</p>
+          </div>
+          <div class="page-head-stat">
+            <span class="page-head-stat-label">Objectiu del bloc</span>
+            <strong>5 encerts</strong>
+            <span>per considerar-lo dominat</span>
+          </div>
+        </div>
+
+        <div class="topic-tabs" role="tablist" aria-label="Tria un bloc" id="topic-tabs">
+          <button class="topic-tab" type="button" role="tab" aria-selected="true" data-topic="1"><span class="tab-number">01</span><span>Domini</span></button>
+          <button class="topic-tab" type="button" role="tab" aria-selected="false" data-topic="2"><span class="tab-number">02</span><span>Composició</span></button>
+          <button class="topic-tab" type="button" role="tab" aria-selected="false" data-topic="3"><span class="tab-number">03</span><span>Equacions</span></button>
+          <button class="topic-tab" type="button" role="tab" aria-selected="false" data-topic="4"><span class="tab-number">04</span><span>Bolzano</span></button>
+          <button class="topic-tab" type="button" role="tab" aria-selected="false" data-topic="5"><span class="tab-number">05</span><span>Grau 3</span></button>
+        </div>
+
+        <div class="practice-layout" id="practice-layout" data-unit="1">
+          <div class="practice-main">
+            <div id="question-card" class="question-card"></div>
+          </div>
+
+          <aside class="practice-side" aria-label="Informació de la sessió">
+            <div class="side-card session-card">
+              <div class="side-card-head">
+                <h3>Sessió d'avui</h3>
+                <span class="session-dot" aria-hidden="true"></span>
+              </div>
+              <div class="session-stats">
+                <div><strong id="session-correct">0</strong><span>encerts</span></div>
+                <div><strong id="session-total">0</strong><span>intents</span></div>
+                <div><strong id="session-streak">0</strong><span>ratxa</span></div>
+              </div>
+              <div class="session-accuracy">
+                <div class="progress-track"><span id="session-accuracy-fill"></span></div>
+                <span id="session-accuracy-label">Encara sense dades</span>
+              </div>
+            </div>
+
+            <div class="side-card unit-card" id="unit-side-card">
+              <div class="side-card-head">
+                <h3 id="side-unit-title">Domini</h3>
+                <span class="side-unit-chip" id="side-unit-chip">Bloc 01</span>
+              </div>
+              <p id="side-unit-summary">Radicals, logaritmes i denominadors: trobar tots els valors possibles de x.</p>
+              <div class="side-mastery">
+                <div class="side-mastery-row">
+                  <span>Progrés del bloc</span>
+                  <strong id="side-unit-progress">0 / 5</strong>
+                </div>
+                <div class="progress-track"><span id="side-unit-fill"></span></div>
+              </div>
+              <div class="side-tip">
+                <span class="side-tip-label">Consell</span>
+                <p id="side-unit-tip">Comença determinant què no pot ser zero i què ha de ser positiu.</p>
+              </div>
+              <button class="text-link" type="button" data-nav="teoria" id="side-theory-link">Repassa la teoria →</button>
+            </div>
+
+            <div class="side-card shortcut-card">
+              <h3>Dreceres de teclat</h3>
+              <div class="shortcut-row"><span><kbd>A</kbd> <kbd>B</kbd> <kbd>C</kbd> <kbd>D</kbd></span><span>Triar opció</span></div>
+              <div class="shortcut-row"><span><kbd>N</kbd></span><span>Següent exercici</span></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= REPTE ============================= -->
+    <section class="view" id="view-repte" aria-labelledby="repte-title" hidden>
+      <div class="page-shell page-section">
+        <div class="page-head">
+          <p class="eyebrow">El repte final</p>
+          <h2 id="repte-title">10 preguntes.<br><em>15 minuts.</em></h2>
+          <p class="page-lede">Un simulacre curt de tots els blocs. Sense pistes, amb correcció detallada quan lliures.</p>
+        </div>
+        <div id="challenge-root"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-shell footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark brand-mark-small">S2</span>
+        <div>
+          <strong>Seminari 2 · Càlcul</strong>
+          <p>Basat en el seminari de Càlcul (2023–24). Material d'estudi no oficial.</p>
+        </div>
+      </div>
+      <div class="footer-actions">
+        <button class="text-link" type="button" data-nav="teoria">Teoria</button>
+        <button class="text-link" type="button" data-nav="practica">Pràctica</button>
+        <button class="text-link footer-reset" type="button" id="reset-progress">Esborra el progrés</button>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="exercises.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
